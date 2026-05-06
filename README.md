@@ -1,3 +1,24 @@
+TASK-1:
+public class HarshadChecker {
+    public static boolean isHarshad(int n) {
+        if (n <= 0) return false;
+        int original = n;
+        int sum = 0;
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        return (original % sum == 0);
+    }
+
+    public static void main(String[] args) {
+        int num = 18;
+        System.out.println(isHarshad(num));
+    }
+}
+
+
+TASK-2:
 class Solution {
     public int sumOfTheDigitsOfHarshadNumber(int n) {
         int sum = 0;
